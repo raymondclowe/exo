@@ -90,6 +90,7 @@ source install.sh
 ### Troubleshooting
 
 - If running on Mac, MLX has an [install guide](https://ml-explore.github.io/mlx/build/html/install.html) with troubleshooting steps.
+- On Windows 11 install fails because there is no prebuilt `netifaces` wheel for Py12/Win11. Solution is to download manually install the necessary wheel from [here](https://github.com/RoccoMatano/netifaces_mvw_win/releases/tag/0.11.0_mvw_win).
 
 ## Documentation
 
