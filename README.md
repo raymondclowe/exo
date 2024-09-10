@@ -86,6 +86,15 @@ pip install .
 source install.sh
 ```
 
+## Docker
+
+Make the installation problems on Windows or with Python < 3.12 go away by running in a docker container.
+
+* `docker build -t exo-ai-cluster .`
+* `docker run -p 8000:8000 exo-ai-cluster`
+
+  
+
 
 ### Troubleshooting
 
