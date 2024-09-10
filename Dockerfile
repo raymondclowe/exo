@@ -1,8 +1,8 @@
 # Use an official Python runtime as a parent image
 FROM python:3.12-slim
 
-# Install git, build tools, and necessary libraries
-RUN apt-get update && apt-get install -y git build-essential && rm -rf /var/lib/apt/lists/*
+# Install git, build tools, and clang
+RUN apt-get update && apt-get install -y git build-essential clang && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory in the container
 WORKDIR /app
@@ -10,7 +10,7 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . .
 
-# Install PyTorch for CPU
+# Install PyTorch for CPU (if needed)
 RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Install any needed packages specified in requirements.txt
